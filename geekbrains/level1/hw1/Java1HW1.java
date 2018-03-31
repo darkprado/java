@@ -6,6 +6,7 @@ public class Java1HW1 {
     */
 
     public static void main(String[] args) {
+
         System.out.println(calc(1,2,3,4));
         System.out.println(isRange(5, 10));
         System.out.println(isRange(15, 10));
@@ -29,7 +30,7 @@ public class Java1HW1 {
     byte by = 1;
     short sh = 2;
     int in = 3;
-    long lo = 15;
+    long lo = 15L;
     float fl = 2.4f;
     double doub = 123.4352352;
     char ch = 'r';
