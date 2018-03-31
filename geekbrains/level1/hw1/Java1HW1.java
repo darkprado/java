@@ -98,11 +98,16 @@ public class Java1HW1 {
     */
 
     public static void isLeapYear (int year) {
-        boolean leap = (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
-        if (leap)
-            System.out.println("Год " + year + " високосный.");
-        else
-            System.out.println("Год " + year + " не високосный.");
+        System.out.println((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0) ?
+                "Год " + year + " високосный." :
+                "Год " + year + " не високосный.");
+        
+//        boolean leap = (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
+//        if (leap)
+//            System.out.println("Год " + year + " високосный.");
+//        else
+//            System.out.println("Год " + year + " не високосный.");
+        
     }
 
 }
