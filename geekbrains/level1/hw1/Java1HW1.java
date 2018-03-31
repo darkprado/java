@@ -10,16 +10,16 @@ public class Java1HW1 {
         System.out.println(calc(1,2,3,4));
         System.out.println(isRange(5, 10));
         System.out.println(isRange(15, 10));
-        System.out.println(positiveOrNegative(7));
-        System.out.println(positiveOrNegative(-7));
+        System.out.println(isPositiveOrNegative(7));
+        System.out.println(isPositiveOrNegative(-7));
         System.out.println(isNegative(-6));
         System.out.println(isNegative(6));
-        hello("Артем");
-        leapYear(4);
-        leapYear(7);
-        leapYear(300);
-        leapYear(1200);
-        leapYear(2018);
+        addNameToHello("Артем");
+        isLeapYear(4);
+        isLeapYear(7);
+        isLeapYear(300);
+        isLeapYear(1200);
+        isLeapYear(2018);
     }
 
     /*
@@ -64,7 +64,7 @@ public class Java1HW1 {
         ноль считаем положительным числом.
     */
 
-    public static String positiveOrNegative (int n) {
+    public static String isPositiveOrNegative (int n) {
         String res = "Отрицательное число.";
         if (n >= 0) res = "Положительное число.";
         return res;
@@ -86,7 +86,7 @@ public class Java1HW1 {
         метод должен вывести в консоль сообщение «Привет, указанное_имя!»;
     */
 
-    public static void hello (String name) {
+    public static void addNameToHello (String name) {
         System.out.println("Привет, " + name + "!");
     }
 
@@ -97,7 +97,7 @@ public class Java1HW1 {
         високосный.
     */
 
-    public static void leapYear (int year) {
+    public static void isLeapYear (int year) {
         boolean leap = (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
         if (leap)
             System.out.println("Год " + year + " високосный.");
