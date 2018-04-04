@@ -137,6 +137,23 @@ public class Java1HW2 {
         System.out.println("Массив после:");
         System.out.println(Arrays.toString(arr7));
 
+        /*
+        task8.
+        (Доп задание) Создать матрицу с указанной размерностью.
+        Заполнить матрицу по спирали (числа увеличиваются на 1)
+        */
+
+        System.out.println("Задание 8.");
+
+        int[][] arr8 = fillingSpiral(3, 3);
+
+        for (int i = 0; i < arr8.length; i++) {
+            for (int j = 0; j < arr8[i].length; j++) {
+                System.out.print(arr8[i][j]);
+            }
+            System.out.println();
+        }
+
     }
 
     //метод для задания 6
@@ -178,4 +195,40 @@ public class Java1HW2 {
             }
         }
     }
+
+    //метод для задания 8
+
+    public static int[][] fillingSpiral (int gorizontLine, int verticalLine) {
+
+        int[][] arr = new int[gorizontLine][verticalLine];
+
+        boolean indexCorrect = gorizontLine > 0 && verticalLine > 0;
+
+        if(indexCorrect) {
+            int count = 1;
+            int numOfIterate = 0;
+            while (count <= gorizontLine * verticalLine) {
+
+                for (int i = 0 + numOfIterate; i < arr.length - numOfIterate; i++) {
+                    if (i == numOfIterate) {
+                        for (int j = 0 + numOfIterate; j < arr[i].length - numOfIterate; j++) {
+                            arr[i][j] = count++;
+                        }
+                    } else if (i != arr.length - 1 - numOfIterate) {
+                        arr[i][arr[i].length - 1 - numOfIterate] = count++;
+                    } else {
+                        for (int j = arr[i].length - 1 - numOfIterate; j >= numOfIterate; j--) {
+                            arr[i][j] = count++;
+                        }
+                        for (int j = arr.length - 2  - numOfIterate; j > numOfIterate; j--) {
+                            arr[j][numOfIterate] = count++;
+                        }
+                    }
+                }
+                numOfIterate++;
+            }
+        }
+        return arr;
+    }
+
 }
