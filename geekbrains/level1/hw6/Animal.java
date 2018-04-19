@@ -23,4 +23,9 @@ public abstract class Animal implements Skills {
         boolean isDone = (height <= jump && height > 0) ? true : false;
         System.out.println(getClass().getName() + " jump on distance " + height + ": " + isDone);
     }
+
+    @Override
+    public void animalParametr () {
+        System.out.println(getClass().getName() + " can run " + run + "m, swim " + swim + "m, jump " + jump + "m.");
+    }
 }

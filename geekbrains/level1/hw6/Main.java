@@ -6,12 +6,16 @@ public class Main {
                 new Dog()
         };
 
+        animals[0].animalParametr();
+
         animals[0].run(50);
         animals[0].run(300);
         animals[0].jump(1.5f);
         animals[0].jump(3);
         animals[0].swim(3);
         animals[0].swim(0);
+
+        animals[1].animalParametr();
 
         animals[1].run(500);
         animals[1].run(700);
